@@ -65,6 +65,7 @@ public class ZeebeStepDef extends BaseStepDef{
 
     @And("I listen on zeebe-export topic")
     public void listen() throws JSONException, UnknownHostException {
+        logger.info("kafka broker: {}", kafkaConfig.kafkaBroker);
         Properties props = new Properties();
         props.put("bootstrap.servers",kafkaConfig.kafkaBroker);
         props.put("client.id",InetAddress.getLocalHost().getHostName());

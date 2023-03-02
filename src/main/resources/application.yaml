@@ -68,4 +68,4 @@ zeebe-operations:
   endpoints:
     workflow: "/channel/workflow/"
     upload-bpmn: "/zeebe/upload"
-  no-of-workflows : 100
+  no-of-workflows : 10
