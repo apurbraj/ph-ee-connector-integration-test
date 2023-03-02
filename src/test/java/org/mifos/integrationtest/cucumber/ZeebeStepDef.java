@@ -1,6 +1,6 @@
 package org.mifos.integrationtest.cucumber;
 
-import io.cucumber.core.internal.com.fasterxml.jackson.databind.deser.std.StringDeserializer;
+import org.apache.kafka.common.serialization.StringDeserializer;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
