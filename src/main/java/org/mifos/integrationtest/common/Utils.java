@@ -3,7 +3,6 @@ package org.mifos.integrationtest.common;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
-import org.springframework.beans.factory.annotation.Value;
 
 public class Utils {
 
