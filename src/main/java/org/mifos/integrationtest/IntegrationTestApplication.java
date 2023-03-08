@@ -25,7 +25,7 @@ public class IntegrationTestApplication {
 				"--plugin", "json:build/cucumber-report.json",
 				"--glue", "org.mifos.integrationtest.cucumber", "src/test/java/resources"};
 		io.cucumber.core.cli.Main.run(arguments);
-		SpringApplication.run(IntegrationTestApplication.class, args);
+		//SpringApplication.run(IntegrationTestApplication.class, args);
 
 	}
 
