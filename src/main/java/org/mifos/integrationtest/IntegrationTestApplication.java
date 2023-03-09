@@ -12,20 +12,20 @@ import org.springframework.context.annotation.Bean;
 
 import javax.annotation.PostConstruct;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/resources")
+/*@RunWith(Cucumber.class)
+@CucumberOptions(features = "src/test/java/resources")*/
 @SpringBootApplication
 public class IntegrationTestApplication {
 
 	public static void main(String[] args) {
-		String[] arguments = {"--plugin", "html:cucumber-report",
+/*		String[] arguments = {"--plugin", "html:cucumber-report",
 				"--plugin", "json:cucumber.json",
 				"--plugin", "pretty",
 				"--plugin", "html:build/cucumber-report.html",
 				"--plugin", "json:build/cucumber-report.json",
 				"--glue", "org.mifos.integrationtest.cucumber", "src/test/java/resources"};
-		io.cucumber.core.cli.Main.run(arguments);
-		//SpringApplication.run(IntegrationTestApplication.class, args);
+		io.cucumber.core.cli.Main.run(arguments);*/
+		SpringApplication.run(IntegrationTestApplication.class, args);
 
 	}
 
