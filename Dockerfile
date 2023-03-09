@@ -1,4 +1,6 @@
 FROM openjdk:17
 
-COPY build/libs/*.jar .
-CMD java -jar *.jar
+WORKDIR /app
+COPY . .
+RUN ls
+CMD ./gradlew cucumberCli
