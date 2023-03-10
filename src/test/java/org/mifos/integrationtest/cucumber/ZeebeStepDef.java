@@ -88,8 +88,8 @@ public class ZeebeStepDef extends BaseStepDef{
                 for (ConsumerRecord<String, String> record : records) {
                     JsonObject payload = JsonParser.parseString(record.value()).getAsJsonObject();
                     JsonObject value = payload.get("value").getAsJsonObject();
-                    String bpmnElementType = value.get("bpmnElementType").getAsString();
-                    String bpmnProcessId = value.get("bpmnProcessId").getAsString();
+                    String bpmnElementType = value.get("bpmnElementType").isJsonNull() ?"": value.get("bpmnElementType").getAsString();
+                    String bpmnProcessId =value.get("bpmnProcessId").isJsonNull() ?"": value.get("bpmnProcessId").getAsString();
                     System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
                     logger.info("value {}", record.value());
                     if(bpmnElementType.matches("START_EVENT") && bpmnProcessId.matches("zeebe-test"))
