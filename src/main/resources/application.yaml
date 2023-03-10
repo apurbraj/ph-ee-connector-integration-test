@@ -69,3 +69,6 @@ zeebe-operations:
     workflow: "/channel/workflow/"
     upload-bpmn: "/zeebe/upload"
   no-of-workflows : 10
+
+zeebe-test:
+  enabled: true

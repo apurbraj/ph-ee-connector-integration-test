@@ -17,4 +17,6 @@ public class ZeebeOperationsConfig {
     @Value("${zeebe-operations.no-of-workflows}")
     public int noOfWorkflows;
 
+    @Value("${zeebe-test.enabled}")
+    public boolean zeebeTest;
 }
