@@ -54,7 +54,6 @@ Feature: Voucher Management Api Test
   Scenario: Fetch Voucher Api Test
     Then I will call the fetch voucher API with expected status of 200
     And I will assert the fields from fetch voucher response
-    And I can stop mock server
 
   @gov
   Scenario: VC-001,002,003,004,005 Error Validity check for Create Voucher API for negative request body
