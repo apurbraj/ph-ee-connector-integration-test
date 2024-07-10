@@ -1,7 +1,5 @@
 package org.mifos.integrationtest;
 
-import courgette.api.CourgetteAfterAll;
-import courgette.api.CourgetteBeforeAll;
 import courgette.api.CourgetteOptions;
 import courgette.api.CourgetteRunLevel;
 import courgette.api.CourgetteTestOutput;
@@ -15,26 +13,12 @@ import org.junit.runner.RunWith;
 //        "junit:build/cucumber.xml" })
 
 @RunWith(Courgette.class)
-@CourgetteOptions(
-        threads = 3,
-        runLevel = CourgetteRunLevel.FEATURE,
-        rerunFailedScenarios = false,
-        testOutput = CourgetteTestOutput.CONSOLE,
-        generateCourgetteRunLog = true,
-        reportTitle = "Paymenthub Test results",
-        reportTargetDir = "build",
-        cucumberOptions = @CucumberOptions(
-                features = "src/test/java/resources",
-                glue = "org.mifos.integrationtest.cucumber",
-                publish = true,
-                plugin = {
-                        "pretty", // Pretty console output
-                        "html:build/cucumber-report.html", // HTML report
-                        "json:build/cucumber-report.json", // JSON report
-                        "junit:build/cucumber.xml" // JUnit XML report
-                }
-        )
-)
+@CourgetteOptions(threads = 3, runLevel = CourgetteRunLevel.FEATURE, rerunFailedScenarios = false, testOutput = CourgetteTestOutput.CONSOLE, generateCourgetteRunLog = true, reportTitle = "Paymenthub Test results", reportTargetDir = "build", cucumberOptions = @CucumberOptions(features = "src/test/java/resources", glue = "org.mifos.integrationtest.cucumber", publish = true, plugin = {
+        "pretty", // Pretty console output
+        "html:build/cucumber-report.html", // HTML report
+        "json:build/cucumber-report.json", // JSON report
+        "junit:build/cucumber.xml" // JUnit XML report
+}))
 @SuppressWarnings({ "FinalClass", "HideUtilityClassConstructor" })
 public class TestRunner {
 

@@ -44,34 +44,34 @@ configure(this) {
 
     tasks.withType(JavaCompile) {
         options.compilerArgs += [
-                "-Xlint:unchecked",
-                "-Xlint:cast",
-                "-Xlint:auxiliaryclass",
-                "-Xlint:deprecation",
-                "-Xlint:dep-ann",
-                "-Xlint:divzero",
-                "-Xlint:empty",
-                "-Xlint:exports",
-                "-Xlint:fallthrough",
-                "-Xlint:finally",
-                "-Xlint:module",
-                "-Xlint:opens",
-                "-Xlint:options",
-                "-Xlint:overloads",
-                "-Xlint:overrides",
-                "-Xlint:path",
-                "-Xlint:processing",
-                "-Xlint:removal",
-                "-Xlint:requires-automatic",
-                "-Xlint:requires-transitive-automatic",
-                "-Xlint:try",
-                "-Xlint:varargs",
-                "-Xlint:preview",
-                "-Xlint:static",
-                "-Xmaxwarns",
-                1500,
-                "-Xmaxerrs",
-                1500
+            "-Xlint:unchecked",
+            "-Xlint:cast",
+            "-Xlint:auxiliaryclass",
+            "-Xlint:deprecation",
+            "-Xlint:dep-ann",
+            "-Xlint:divzero",
+            "-Xlint:empty",
+            "-Xlint:exports",
+            "-Xlint:fallthrough",
+            "-Xlint:finally",
+            "-Xlint:module",
+            "-Xlint:opens",
+            "-Xlint:options",
+            "-Xlint:overloads",
+            "-Xlint:overrides",
+            "-Xlint:path",
+            "-Xlint:processing",
+            "-Xlint:removal",
+            "-Xlint:requires-automatic",
+            "-Xlint:requires-transitive-automatic",
+            "-Xlint:try",
+            "-Xlint:varargs",
+            "-Xlint:preview",
+            "-Xlint:static",
+            "-Xmaxwarns",
+            1500,
+            "-Xmaxerrs",
+            1500
         ]
         options.deprecation = true
     }
@@ -86,18 +86,18 @@ configure(this) {
             trimTrailingWhitespace()
             custom 'Modifier ordering', {
                 def modifierRanking = [
-                        public      : 1,
-                        protected   : 2,
-                        private     : 3,
-                        abstract    : 4,
-                        default     : 5,
-                        static      : 6,
-                        final       : 7,
-                        transient   : 8,
-                        volatile    : 9,
-                        synchronized: 10,
-                        native      : 11,
-                        strictfp    : 12
+                    public      : 1,
+                    protected   : 2,
+                    private     : 3,
+                    abstract    : 4,
+                    default     : 5,
+                    static      : 6,
+                    final       : 7,
+                    transient   : 8,
+                    volatile    : 9,
+                    synchronized: 10,
+                    native      : 11,
+                    strictfp    : 12
                 ]
                 it.replaceAll(/\W(?:public |protected |private |abstract |default |static |final |transient |volatile |synchronized |native |strictfp ){2,}/, {
                     it.replaceAll(/(?:public |protected |private |abstract |default |static |final |transient |volatile |synchronized |native |strictfp ){2,}/, {
