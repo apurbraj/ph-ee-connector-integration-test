@@ -44,11 +44,6 @@ public class WireMockServerSingleton {
         throw new IllegalStateException("Failed to start WireMock server after " + maxRetries + " attempts.");
     }
 
-    private int getRandomPort() {
-        // This returns a port number in the range 1024-65535
-        return 1024 + (int) (Math.random() * ((65535 - 1024) + 1));
-    }
-
     public static int getPort() {
         WireMockServer instance = threadLocalInstance.get();
         if (instance != null && instance.isRunning()) {

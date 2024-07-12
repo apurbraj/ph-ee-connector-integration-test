@@ -27,7 +27,6 @@ Feature: Test ability to make payment to individual with bank account
     Given I have tenant as "paymentbb2"
     And I have the demo csv file "bulk_payment_closedl_mock_mojaloop.csv"
     And I create a list of payee identifiers from csv file
-    When I can inject MockServer
     Then I can start mock server
     And I can register the stub with "/registerBeneficiary" endpoint for "PUT" request with status of 200
     And I create a IdentityMapperDTO for registering beneficiary
